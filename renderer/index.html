@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<title>Lite Serve</title>
+		<link rel="stylesheet" type="text/css" href="style.css"></link>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	</head>
+	<body>
+		<div class="server-logs">
+			<div class="log header">
+				<div class="address">Address</div>
+				<div class="hour">Hour</div>
+				<div class="message">Message</div>
+			</div>
+			<div class="content" id="logs-container">
+			</div>
+		</div>
+		
+		<div class="server-config">
+			<div class="basic">
+				<div class="root-select">
+					<label>Root Directory</label>
+					<input type="text" id="root-path" spellcheck="false">
+					<button id="browse">Browse</button>
+				</div>
+				<div class="port-select">
+					<label>Port</label>
+					<input type="number" id="port" placeholder="8000" min="1024" max="65535">
+				</div>
+			</div>
+			<div class="advanced">
+				<div class="https-mode">
+					<label>HTTPS Mode</label>
+					<input type="checkbox" id="https-mode">
+				</div>
+			</div>
+		</div>
+
+		<div class="status-bar">
+			<div class="server-control">
+				<button id="start-server">Start</button>
+				<button id="stop-server" disabled>Stop</button>
+				<button id="open-in-browser" disabled>Open in browser</button>
+			</div>
+			<div class="server-status"></div>
+		</div>
+
+		<div class="context-menu hidden">
+			<div class="option" id="ctx-copy">Copy</div>
+			<div class="option" id="ctx-paste">Paste</div>
+			<div class="option" id="ctx-cut">Cut</div>
+		</div>
+		
+		<script src="statuses.js"></script>
+		<script src="script.js" type="text/javascript"></script>
+	</body>
+</html>

@@ -1,0 +1,359 @@
+:root {
+	--c-bg: #1f1f27;
+	--c-bgl: #2b2b35;
+	--c-bgd: #12121a;
+	--c-fg: #3c3c4d;
+	--c-fgl: #616175;
+	--c-primary: rgb(93, 69, 230);
+	--c-primary-light: rgb(123, 102, 243);
+	--c-primary-dark: rgb(76, 53, 211);
+	--c-primary-darker: rgb(63, 44, 172);
+	--c-txt: #dedeee;
+	--c-txtl: #ebebfa;
+	--c-txtd: #bebece;
+	--c-err: #fc4646;
+	--c-errl: #ffc5c5;
+	--c-errd: #d82d2d;
+	--c-warn: #ffff76;
+}
+
+::selection {
+	background-color: var(--c-primary-dark);
+	color: var(--c-txtl);
+}
+
+::-webkit-scrollbar {
+	background-color: var(--c-bg);
+	width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--c-fg);
+	border: 2px solid var(--c-bg);
+	border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb:active {
+	background-color: var(--c-primary);
+}
+
+@font-face {
+	font-family: LiteServe;
+	src: url("assets/Exo-Regular.ttf");
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: LiteServe;
+	color: var(--c-txt);
+	user-select: none;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	
+	background-color: var(--c-bg);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.server-logs {
+	background-color: var(--c-bgd);
+	color: var(--c-txtd);
+
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+
+	overflow: hidden;
+}
+
+.server-logs .content {
+	overflow: auto;
+	width: 100%;
+	height: 100%;
+}
+
+.server-logs .content > :nth-child(2n) {
+	background-color: rgb(0, 0, 0, .5);
+}
+
+.log {
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.log > div {
+	user-select: text !important;
+	font-size: 11pt;
+	width: 100%;
+	padding: 4px 0;
+	text-align: center;
+	color: var(--c-txtd);
+}
+
+.log.header {
+	background-color: var(--c-bg);
+	border-bottom: 1px solid var(--c-bgl);
+}
+
+.log.header > div {
+	text-align: center;
+	user-select: none !important;
+	color: var(--c-txt);
+}
+
+.log .address {
+	width: 250px;
+}
+.log .hour {
+	width: 150px;
+}
+.log .message {
+	text-align: left !important;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.server-config {
+	padding: 12px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+
+	border-top: 1px solid var(--c-fg);
+}
+
+.server-config > div {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.server-config > div > div {
+	display: flex;
+	gap: 4px;
+	align-items: center;
+}
+
+.root-select {
+	width: 100%;
+}
+
+.root-select label {
+	width: 160px;
+}
+
+input#root-path {
+	width: 100%;
+}
+
+input#port {
+	width: 60px;
+	min-width: 0px;
+}
+
+.status-bar {
+	padding: 6px 12px;
+	width: 100%;
+	border-top: 1px solid var(--c-fg);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.server-control {
+	display: flex;
+	gap: 6px;
+}
+
+.server-control button {
+	font-size: 10pt;
+	letter-spacing: 1px;
+}
+
+.server-status {
+	font-size: 11pt;
+	color: var(--c-txtd);
+}
+
+.server-status.error {
+	color: var(--c-err);
+}
+
+.server-status.warning {
+	color: var(--c-warn);
+}
+
+.context-menu {
+	position: absolute;
+	background-color: var(--c-bg);
+	padding: 4px;
+	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+	border: 1px solid var(--c-fg);
+	border-radius: 3px;
+}
+
+.context-menu .option {
+	padding: 2px 20px;
+	font-size: 11pt;
+	color: var(--c-txtd);
+	cursor: pointer;
+	border-radius: 3px;
+}
+
+.context-menu .option:hover {
+	background-color: var(--c-bgl);
+}
+
+.context-menu .option:active {
+	background-color: var(--c-bgd);
+}
+
+.hidden {
+	display: none;
+}
+
+input.error {
+	border-color: var(--c-errl) !important;
+	color: var(--c-errl) !important;
+	background-color: var(--c-errd) !important;
+}
+
+input[type=text], input[type=number] {
+	border: none;
+	background-color: var(--c-fg);
+	border-radius: 2px;
+	color: var(--c-txtl);
+	outline: none;
+	padding: 4px 8px;
+	min-width: 120px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type=number] {
+	appearance: none;
+	-moz-appearance: none;
+}
+
+input:focus {
+	background-color: var(--c-fgl);
+	box-shadow: 0 0 0 2px var(--c-primary-darker);
+}
+
+input[type=checkbox] {
+	appearance: none;
+	height: 20px;
+	aspect-ratio: 2 / 1;
+	border-radius: 16px;
+	background-color: var(--c-fg);
+	border: 1px solid var(--c-fgl);
+	cursor: pointer;
+	position: relative;
+	transition: background-color 100ms ease-in;
+	outline: none;
+
+	margin-left: 6px;
+}
+
+input[type=checkbox]::after {
+	content: '';
+	height: 100%;
+	aspect-ratio: 1 / 1;
+	position: absolute;
+	background-color: var(--c-txt);
+	border-radius: 16px;
+	box-shadow: -1px -3px 3px rgba(0, 0, 0, 0.25) inset;
+	transition: 100ms ease-in;
+}
+
+input[type=checkbox]:hover {
+	background-color: var(--c-fgl);
+}
+
+input[type=checkbox]:checked {
+	background-color: var(--c-primary);
+	border-color: var(--c-primary-light);
+}
+
+input[type=checkbox]:checked::after {
+	margin-left: 50%;
+}
+
+/*input[type=checkbox] {
+	appearance: none;
+	height: 16px;
+	aspect-ratio: 1 / 1;
+	background-color: var(--c-fg);
+	border: 1px solid var(--c-fgl);
+	border-radius: 2px;
+	cursor: pointer;
+	position: relative;
+	outline: none;
+}
+
+input[type=checkbox]::after {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 80%;
+}
+
+input[type=checkbox]:hover {
+	background-color: var(--c-fgl);
+}
+
+input[type=checkbox]:checked {
+	background-color: var(--c-primary);
+	border-color: var(--c-primary-light);
+}
+
+input[type=checkbox]:checked::after {
+	background-image: url(assets/tick.svg);
+}*/
+
+button {
+	background-color: var(--c-primary);
+	color: var(--c-txtl);
+	outline: none;
+	padding: 4px 6px;
+	border: none;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: var(--c-primary-light);
+}
+
+button:focus {
+	box-shadow: 0 0 0 2px var(--c-primary-darker);
+}
+
+button:active {
+	background-color: var(--c-primary-dark);
+}
+
+button:disabled {
+	background-color: var(--c-primary-darker);
+	color: var(--c-txtd);
+	cursor: not-allowed;
+}

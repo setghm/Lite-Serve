@@ -1,0 +1,24 @@
+{
+  "name": "lite-serve",
+  "version": "1.0.0",
+  "description": "Simple, fast, quick and lite http server for tests.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js"
+  },
+  "keywords": [
+    "Simple",
+    "Fast",
+    "Quick",
+    "Lite",
+    "HTTP",
+    "Server",
+    "Web"
+  ],
+  "devDependencies": {
+    "electron": "^24.3.0"
+  },
+  "author": "Set HM",
+  "license": "MIT",
+  "dependencies": {}
+}
