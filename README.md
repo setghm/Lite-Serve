@@ -4,7 +4,7 @@ Simple, fast, quick and lite http server for tests.
 
 Use it for your personal projects if you prefer user interface based tools.
 
-## Test this app.
+## Run this application on your computer.
 
 To build the application use:
 ```console
@@ -15,5 +15,8 @@ To run the application:
 ```console
 npm start
 ```
+
+> [!NOTE]
+> Don't forget to execute ```npm install``` in order to get all the dependencies to build or run this application.
 
 _By Set HM 2024_
