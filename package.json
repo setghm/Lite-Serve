@@ -16,7 +16,7 @@
     "Web"
   ],
   "devDependencies": {
-    "electron": "^24.3.0"
+    "electron": "^22.0.0"
   },
   "author": "Set HM",
   "license": "MIT",
