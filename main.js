@@ -34,7 +34,9 @@ function createWindow() {
 		}
 	})
 	
-	//mainWindow.setMenu(null)
+	// Remove this in debug mode.
+	mainWindow.setMenu(null)
+
 	mainWindow.loadFile('renderer/index.html')
 }
 

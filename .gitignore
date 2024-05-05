@@ -1,4 +1,8 @@
+.DS_Store
+
 # NPM generated.
 package-lock.json
-node_modules/
+/node_modules/
 
+# Builds.
+/dist/

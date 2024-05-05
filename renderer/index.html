@@ -11,7 +11,7 @@
 		<div class="server-logs">
 			<div class="log header">
 				<div class="address">Address</div>
-				<div class="hour">Hour</div>
+				<div class="hour">Time</div>
 				<div class="message">Message</div>
 			</div>
 			<div class="content" id="logs-container">
@@ -30,7 +30,9 @@
 					<input type="number" id="port" placeholder="8000" min="1024" max="65535">
 				</div>
 			</div>
-			<div class="advanced">
+
+			<!-- Coming soon: HTTPS mode -->
+			<div class="advanced" style="display:none">
 				<div class="https-mode">
 					<label>HTTPS Mode</label>
 					<input type="checkbox" id="https-mode">

@@ -1,10 +1,12 @@
 {
   "name": "lite-serve",
+  "productName": "Lite Serve",
   "version": "1.0.0",
   "description": "Simple, fast, quick and lite http server for tests.",
   "main": "main.js",
   "scripts": {
-    "start": "electron main.js"
+    "start": "electron main.js",
+    "dist": "electron-builder",
   },
   "keywords": [
     "Simple",
@@ -16,9 +18,21 @@
     "Web"
   ],
   "devDependencies": {
-    "electron": "^22.0.0"
+    "electron": "^22.0.0",
+    "electron-builder": "^22.0.0"
   },
   "author": "Set HM",
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {},
+  "build": {
+    "appId": "io.setapps.liteserve",
+    "files": "!build-assets${/*}",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "portable",
+      "icon": "build-assets/icon.ico"
+    }
+  }
 }
