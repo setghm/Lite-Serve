@@ -1,6 +1,6 @@
 # <img src="renderer/assets/icon.png" alt="" width="36pt"> Lite Serve
 
-Simple HTTP server with a GUI.
+Simple HTTP server with a GUI made with Electron JS.
 
 ## Run this application on your computer.
 
@@ -17,4 +17,4 @@ npm start
 > [!NOTE]
 > Don't forget to execute ```npm install``` in order to get all the dependencies to build or run this application.
 
-_By Set HM 2024_
+_By setghm - 2024_
