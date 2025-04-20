@@ -1,8 +1,6 @@
 # <img src="renderer/assets/icon.png" alt="" width="36pt"> Lite Serve
 
-Simple, fast, quick and lite http server for tests.
-
-Use it for your personal projects if you prefer user interface based tools.
+Simple HTTP server with a GUI.
 
 ## Run this application on your computer.
 
